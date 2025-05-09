@@ -598,6 +598,50 @@
         .nav-item:nth-child(7) .nav-link {
             transition-delay: 0.7s;
         }
+          /* Custom transition effects */
+    .contact-icon {
+        transition: all 0.3s ease;
+    }
+    
+    .contact-icon i {
+        transition: all 0.3s ease;
+    }
+    
+    .social-icon {
+        transition: all 0.3s ease;
+    }
+    
+    .form-control, .form-select, .form-check-input {
+        transition: all 0.3s ease !important;
+    }
+    
+    .btn-book {
+        transition: all 0.3s ease !important;
+    }
+    
+    /* Hover effects */
+    .contact-info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+        transition: all 0.3s ease;
+    }
+    
+    .contact-form-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+        transition: all 0.3s ease;
+    }
+    
+    /* Custom animation for form submission */
+    @keyframes formSubmit {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
+    
+    #contactForm:focus-within {
+        animation: formSubmit 0.6s ease;
+    }
     </style>
 </head>
 
@@ -702,7 +746,200 @@
             </div>
         </div>
     </nav>
+<!-- Contact Section with Transitions -->
+<section class="contact-section py-5 py-lg-7" style="background-color: var(--off-white);">
+    <div class="container">
+        <!-- Section Header with Fade-In Animation -->
+        <div class="row justify-content-center mb-5 mb-lg-7" data-aos="fade-up" data-aos-duration="800">
+            <div class="col-lg-8 text-center">
+                <span class="d-block mb-3 text-uppercase" style="color: var(--primary-gold); letter-spacing: 3px; font-size: 0.9rem;">Get In Touch</span>
+                <h2 class="mb-4" style="font-size: 2.5rem;">Contact Zion Beauty Studio</h2>
+                <div class="divider mx-auto" style="width: 80px; height: 2px; background-color: var(--primary-gold);"></div>
+            </div>
+        </div>
 
+        <div class="row g-5">
+            <!-- Contact Info Column with Staggered Animations -->
+            <div class="col-lg-5">
+                <div class="contact-info-card p-4 p-lg-5 h-100" 
+                     style="background-color: white; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);"
+                     data-aos="fade-right" 
+                     data-aos-duration="800">
+                     
+                    <h3 class="mb-4" style="font-family: 'Marcellus', serif; font-size: 1.8rem;">Visit Our Studio</h3>
+                    <p class="mb-5">We'd love to hear from you! Whether you have questions about our services or want to book an appointment, our team is ready to assist you.</p>
+                    
+                    <!-- Contact Items with Staggered Animations -->
+                    <div class="contact-item d-flex mb-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+                        <div class="contact-icon flex-shrink-0" style="width: 50px; height: 50px; background-color: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--primary-gold); font-size: 1.2rem; transition: all 0.3s ease;"></i>
+                        </div>
+                        <div class="contact-text ms-3">
+                            <h5 style="font-family: 'Marcellus', serif;">Location</h5>
+                            <p class="mb-0">123 Luxury Avenue, Suite 500<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item d-flex mb-4" data-aos="fade-up" data-aos-delay="150" data-aos-duration="600">
+                        <div class="contact-icon flex-shrink-0" style="width: 50px; height: 50px; background-color: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fas fa-phone-alt" style="color: var(--primary-gold); font-size: 1.2rem; transition: all 0.3s ease;"></i>
+                        </div>
+                        <div class="contact-text ms-3">
+                            <h5 style="font-family: 'Marcellus', serif;">Call Us</h5>
+                            <p class="mb-0">(123) 456-7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item d-flex mb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+                        <div class="contact-icon flex-shrink-0" style="width: 50px; height: 50px; background-color: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fas fa-envelope" style="color: var(--primary-gold); font-size: 1.2rem; transition: all 0.3s ease;"></i>
+                        </div>
+                        <div class="contact-text ms-3">
+                            <h5 style="font-family: 'Marcellus', serif;">Email Us</h5>
+                            <p class="mb-0">info@zionbeauty.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item d-flex" data-aos="fade-up" data-aos-delay="250" data-aos-duration="600">
+                        <div class="contact-icon flex-shrink-0" style="width: 50px; height: 50px; background-color: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fas fa-clock" style="color: var(--primary-gold); font-size: 1.2rem; transition: all 0.3s ease;"></i>
+                        </div>
+                        <div class="contact-text ms-3">
+                            <h5 style="font-family: 'Marcellus', serif;">Hours</h5>
+                            <p class="mb-0">Monday - Friday: 9am - 7pm<br>Saturday: 10am - 5pm<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links with Hover Effects -->
+                    <div class="social-links mt-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
+                        <h5 class="mb-3" style="font-family: 'Marcellus', serif;">Follow Us</h5>
+                        <a href="#" class="me-3 social-icon" style="color: var(--primary-gray); font-size: 1.2rem; display: inline-block; transition: all 0.3s ease;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="me-3 social-icon" style="color: var(--primary-gray); font-size: 1.2rem; display: inline-block; transition: all 0.3s ease;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="me-3 social-icon" style="color: var(--primary-gray); font-size: 1.2rem; display: inline-block; transition: all 0.3s ease;">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="me-3 social-icon" style="color: var(--primary-gray); font-size: 1.2rem; display: inline-block; transition: all 0.3s ease;">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form Column with Slide-In Animation -->
+            <div class="col-lg-7">
+                <div class="contact-form-card p-4 p-lg-5 h-100" 
+                     style="background-color: white; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);"
+                     data-aos="fade-left" 
+                     data-aos-duration="800">
+                     
+                    <h3 class="mb-4" style="font-family: 'Marcellus', serif; font-size: 1.8rem;">Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" 
+                                           style="border-radius: 0; border: 1px solid #ddd; height: 55px; transition: all 0.3s ease;">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" 
+                                           style="border-radius: 0; border: 1px solid #ddd; height: 55px; transition: all 0.3s ease;">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number" 
+                                           style="border-radius: 0; border: 1px solid #ddd; height: 55px; transition: all 0.3s ease;">
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
+                                <div class="form-floating">
+                                    <select class="form-select" id="service" 
+                                            style="border-radius: 0; border: 1px solid #ddd; height: 55px; transition: all 0.3s ease;">
+                                        <option selected disabled>Select a service</option>
+                                        <option value="Microblading">Microblading</option>
+                                        <option value="Powder Brows">Powder Brows</option>
+                                        <option value="Combo Brows">Combo Brows</option>
+                                        <option value="Lip Blush">Lip Blush</option>
+                                        <option value="Eyeliner">Eyeliner</option>
+                                        <option value="Lash Lift & Tint">Lash Lift & Tint</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label for="service">Service Interested In</label>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" placeholder="Your Message" 
+                                              style="border-radius: 0; border: 1px solid #ddd; height: 150px; transition: all 0.3s ease;"></textarea>
+                                    <label for="message">Your Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="350">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter" checked style="transition: all 0.3s ease;">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter for updates and promotions
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4" data-aos="fade-up" data-aos-delay="400">
+                                <button type="submit" class="btn btn-book w-100 py-3" 
+                                        style="font-size: 1rem; letter-spacing: 1.5px; transition: all 0.3s ease;">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section with Zoom-In Effect -->
+<section class="map-section" data-aos="zoom-in" data-aos-duration="800">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256024087!2d-73.9878449245258!3d40.74844097138938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1623256789012!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section with Pulse Animation -->
+<section class="cta-section py-5 py-lg-7" style="background-color: var(--black);" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h3 class="text-white mb-3" style="font-family: 'Marcellus', serif; font-size: 1.8rem;">Ready to Transform Your Look?</h3>
+                <p class="text-white-50 mb-0">Book your consultation today and let our experts create your perfect beauty enhancement.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="#" class="btn btn-book py-3 px-5" 
+                   style="font-size: 1rem; letter-spacing: 1.5px; transition: all 0.3s ease;"
+                   data-aos="zoom-in" 
+                   data-aos-delay="300">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -811,6 +1048,50 @@
                 element.classList.add('active');
             });
         });
+
+            // Initialize AOS Animation with custom settings
+    AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-in-out-quad',
+        offset: 120
+    });
+
+    // Add hover effects to contact icons
+    document.querySelectorAll('.contact-icon').forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = 'rgba(212, 175, 55, 0.2)';
+            this.querySelector('i').style.transform = 'scale(1.1)';
+        });
+        icon.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = 'rgba(212, 175, 55, 0.1)';
+            this.querySelector('i').style.transform = 'scale(1)';
+        });
+    });
+
+    // Add hover effects to social icons
+    document.querySelectorAll('.social-icon').forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.color = 'var(--primary-gold)';
+            this.style.transform = 'translateY(-3px)';
+        });
+        icon.addEventListener('mouseleave', function() {
+            this.style.color = 'var(--primary-gray)';
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Form input focus effects
+    document.querySelectorAll('.form-control, .form-select').forEach(input => {
+        input.addEventListener('focus', function() {
+            this.style.borderColor = 'var(--primary-gold)';
+            this.style.boxShadow = '0 0 0 0.25rem rgba(212, 175, 55, 0.1)';
+        });
+        input.addEventListener('blur', function() {
+            this.style.borderColor = '#ddd';
+            this.style.boxShadow = 'none';
+        });
+    });
     </script>
 </body>
 
