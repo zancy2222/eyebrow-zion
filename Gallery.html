@@ -338,6 +338,384 @@
                 color: var(--primary-gold);
             }
         }
+    /* Gallery Section Styling */
+    .gallery-section {
+        position: relative;
+        overflow: hidden;
+        background-color: var(--off-white);
+    }
+    
+    .divider {
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-gold);
+        margin-top: 15px;
+    }
+    
+    /* Gallery Filter Styling */
+    .gallery-filter {
+        display: inline-flex;
+        background-color: white;
+        padding: 5px;
+        border-radius: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        color: var(--black);
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 30px;
+        background: transparent;
+        border: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+    
+    .filter-btn:hover {
+        color: var(--primary-gold);
+    }
+    
+    .filter-btn.active {
+        background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+        color: var(--black);
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+    }
+    
+    /* Gallery Card Styling */
+    .gallery-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        transition: all 0.4s ease;
+        position: relative;
+    }
+    
+    .gallery-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gallery-img-container {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .gallery-img-container img {
+        transition: all 0.8s ease;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .gallery-card:hover .gallery-img-container img {
+        transform: scale(1.05);
+    }
+    
+    .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .gallery-card:hover .gallery-overlay {
+        opacity: 1;
+    }
+    
+    .gallery-icon {
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--black);
+        font-size: 1.1rem;
+        transform: scale(0);
+        transition: all 0.4s ease;
+    }
+    
+    .gallery-card:hover .gallery-icon {
+        transform: scale(1);
+    }
+    
+    .gallery-info {
+        padding: 20px;
+        position: relative;
+    }
+    
+    .gallery-info h5 {
+        margin-bottom: 5px;
+        font-family: 'Marcellus', serif;
+    }
+    
+    .gallery-info p {
+        color: var(--primary-gray);
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .before-after-tag {
+        position: absolute;
+        top: -15px;
+        right: 20px;
+        background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+        color: var(--black);
+        font-size: 0.75rem;
+        padding: 5px 15px;
+        border-radius: 30px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    
+    /* View More Button */
+    .btn-gallery-more {
+        background-color: transparent;
+        border: 2px solid var(--primary-gold);
+        color: var(--black);
+        border-radius: 30px;
+        padding: 12px 30px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn-gallery-more::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+    
+    .btn-gallery-more:hover::before {
+        width: 100%;
+    }
+    
+    .btn-gallery-more:hover {
+        color: var(--black);
+        border-color: transparent;
+    }
+    
+    /* Testimonials Section */
+    .reviews-section {
+        background-color: white;
+    }
+    
+    .review-carousel {
+        position: relative;
+        padding: 30px 0;
+    }
+    
+    .review-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 40px;
+        margin: 20px auto;
+        max-width: 800px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        text-align: center;
+    }
+    
+    .review-stars {
+        color: var(--primary-gold);
+        font-size: 1.2rem;
+    }
+    
+    .review-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--black);
+        font-style: italic;
+        margin-bottom: 30px;
+    }
+    
+    .review-client h5 {
+        color: var(--black);
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .review-client p {
+        color: var(--primary-gray);
+        margin-bottom: 0;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-gold);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+    
+    .carousel-control-prev {
+        left: -10px;
+    }
+    
+    .carousel-control-next {
+        right: -10px;
+    }
+    
+    .carousel-control-prev i,
+    .carousel-control-next i {
+        color: var(--black);
+        font-size: 1rem;
+    }
+    
+    .custom-indicators {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 0;
+        justify-content: center;
+    }
+    
+    .custom-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ddd;
+        opacity: 0.5;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .custom-indicators button.active {
+        background-color: var(--primary-gold);
+        opacity: 1;
+        width: 30px;
+        border-radius: 10px;
+    }
+    
+    /* Call to Action Section */
+    .cta-section {
+        background-color: var(--off-white);
+    }
+    
+    .cta-card {
+        background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url('/api/placeholder/1200/800') center/cover no-repeat;
+        border-radius: 15px;
+        padding: 50px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cta-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent);
+        z-index: 1;
+    }
+    
+    .cta-card > .row {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .cta-card h3 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .cta-card p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+    
+    .btn-cta {
+        background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+        color: var(--black);
+        border-radius: 30px;
+        padding: 12px 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    }
+    
+    .btn-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 991.98px) {
+        .gallery-filter {
+            padding: 5px;
+        }
+        .filter-btn {
+            padding: 8px 15px;
+            font-size: 0.8rem;
+        }
+        .cta-card {
+            padding: 30px;
+        }
+        .review-card {
+            padding: 30px 20px;
+        }
+    }
+    
+    @media (max-width: 767.98px) {
+        .gallery-img-container img {
+            height: 250px;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
+    }
+    
+    /* Animation for filtered items */
+    .gallery-item {
+        transition: all 0.5s ease;
+    }
+    
+    .gallery-item.hide {
+        opacity: 0;
+        transform: scale(0.8);
+        flex: 0;
+        width: 0;
+        padding: 0;
+        margin: 0;
+    }
 
         /* Mobile Menu Animation */
         .navbar-collapse.collapsing {
@@ -678,6 +1056,178 @@
         </div>
     </nav>
 
+<!-- Gallery Section -->
+<section class="gallery-section py-5 my-4">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h6 class="text-uppercase" style="color: var(--primary-gold); letter-spacing: 3px; font-weight: 500;" data-aos="fade-up">Our Portfolio</h6>
+                <h2 class="display-5 mb-3" data-aos="fade-up" data-aos-delay="100">Eyebrow Transformation Gallery</h2>
+                <div class="divider mx-auto" data-aos="fade-up" data-aos-delay="200"></div>
+                <p class="lead mt-4" data-aos="fade-up" data-aos-delay="300">Discover our stunning collection of eyebrow transformations, showcasing our expertise in enhancing natural beauty.</p>
+            </div>
+        </div>
+
+        <!-- Gallery Filter -->
+        <div class="row mb-5">
+            <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="gallery-filter">
+                    <button class="btn filter-btn active" data-filter="all">All Services</button>
+                    <button class="btn filter-btn" data-filter="microblading">Microblading</button>
+                    <button class="btn filter-btn" data-filter="powder">Powder Brows</button>
+                    <button class="btn filter-btn" data-filter="combo">Combo Brows</button>
+                    <button class="btn filter-btn" data-filter="correction">Corrections</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row gallery-container g-4">
+            <!-- Item 1 -->
+            <div class="col-lg-4 col-md-6 gallery-item microblading" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="img/1.png" alt="Microblading Before & After" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <a href="img/5.png" data-lightbox="gallery" data-title="Natural Microblading - Perfect for thin brows" class="gallery-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h5>Natural Microblading</h5>
+                        <p>Perfect for thin or sparse eyebrows</p>
+                        <div class="before-after-tag">Before & After</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-lg-4 col-md-6 gallery-item powder" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="img/1.png" alt="Powder Brows Transformation" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <a href="img/5.png" data-lightbox="gallery" data-title="Ombré Powder Brows - For a defined makeup look" class="gallery-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h5>Ombré Powder Brows</h5>
+                        <p>For a defined makeup look</p>
+                        <div class="before-after-tag">Before & After</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-lg-4 col-md-6 gallery-item combo" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="img/1.png" alt="Combo Brows Results" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <a href="img/5.png" data-lightbox="gallery" data-title="Combo Brows - Best of both techniques" class="gallery-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h5>Combo Brows</h5>
+                        <p>Best of both techniques</p>
+                        <div class="before-after-tag">Before & After</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-lg-4 col-md-6 gallery-item correction" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="img/1.png" alt="Brow Correction" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <a href="img/5.png" data-lightbox="gallery" data-title="Brow Correction - Fixing previous work" class="gallery-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h5>Brow Correction</h5>
+                        <p>Fixing previous work</p>
+                        <div class="before-after-tag">Before & After</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="col-lg-4 col-md-6 gallery-item microblading" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="img/1.png" alt="Microblading for Blonde Hair" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <a href="img/5.png" data-lightbox="gallery" data-title="Blonde Microblading - Subtle and natural" class="gallery-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h5>Blonde Microblading</h5>
+                        <p>Subtle and natural</p>
+                        <div class="before-after-tag">Before & After</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="col-lg-4 col-md-6 gallery-item powder" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="img/1.png" alt="Soft Powder Brows" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <a href="img/5.png" data-lightbox="gallery" data-title="Soft Powder Brows - For a natural filled look" class="gallery-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h5>Soft Powder Brows</h5>
+                        <p>For a natural filled look</p>
+                        <div class="before-after-tag">Before & After</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View More Button -->
+        <div class="row mt-5">
+            <div class="col-12 text-center" data-aos="fade-up">
+                <a href="#" class="btn btn-gallery-more">View Full Gallery <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="cta-card" data-aos="fade-up">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <h3>Ready to Transform Your Eyebrows?</h3>
+                            <p class="mb-lg-0">Schedule your consultation today and let our experts create the perfect brows for you.</p>
+                        </div>
+                        <div class="col-lg-4 text-center text-lg-end mt-4 mt-lg-0">
+                            <a href="Booking.html" class="btn btn-cta">Book Your Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -787,6 +1337,51 @@
             });
         });
     </script>
+    <script>
+    // Gallery Filter Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        // Filter gallery items when buttons are clicked
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Get filter value
+                const filterValue = btn.getAttribute('data-filter');
+                
+                // Filter items
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.classList.remove('hide');
+                    } else {
+                        item.classList.add('hide');
+                    }
+                });
+            });
+        });
+        
+        // Initialize Lightbox
+        if (typeof lightbox !== 'undefined') {
+            lightbox.option({
+                'resizeDuration': 300,
+                'wrapAround': true,
+                'disableScrolling': true,
+                'fadeDuration': 300
+            });
+        }
+    });
+    
+    // Reinitialize AOS for dynamically loaded content
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => {
+            AOS.refresh();
+        }, 500);
+    });
+</script>
 </body>
 
 </html>

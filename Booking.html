@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+
     <link
         href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -598,6 +600,285 @@
         .nav-item:nth-child(7) .nav-link {
             transition-delay: 0.7s;
         }
+
+        /* Booking Section Styles */
+        .booking-section {
+            background-color: var(--off-white);
+            padding: 100px 0;
+        }
+
+        .subheading {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .heading-line {
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-gold);
+            margin: 0 auto;
+        }
+
+        /* Modern Calendar Container */
+        .calendar-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Calendar Header */
+        .fc .fc-toolbar.fc-header-toolbar {
+            margin-bottom: 0;
+            padding: 1.5rem 1.5rem 0.5rem;
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .fc-toolbar-title {
+            font-size: 1.3rem !important;
+            font-weight: 600;
+            color: #333;
+            letter-spacing: -0.5px;
+        }
+
+        /* Navigation Buttons */
+        .fc .fc-button {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            border-radius: 8px !important;
+            border: none;
+            box-shadow: none;
+            transition: all 0.2s ease;
+            height: auto;
+        }
+
+        .fc .fc-button-primary {
+            background-color: transparent;
+            color: #555;
+            border: 1px solid #e0e0e0;
+        }
+
+        .fc .fc-button-primary:hover {
+            background-color: #f8f8f8;
+            color: var(--primary-gold);
+            border-color: #e0e0e0;
+        }
+
+        .fc .fc-button-primary:not(:disabled).fc-button-active,
+        .fc .fc-button-primary:not(:disabled):active {
+            background-color: #f0f0f0;
+            color: var(--primary-gold);
+            border-color: #e0e0e0;
+        }
+
+        /* Calendar Grid */
+        .fc .fc-view-harness {
+            border-radius: 0 0 12px 12px;
+            overflow: hidden;
+        }
+
+        .fc-theme-standard .fc-scrollgrid {
+            border: none;
+        }
+
+        /* Day Headers */
+        .fc .fc-col-header-cell {
+            padding: 0.8rem 0;
+            background: #fafafa;
+            border-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .fc .fc-col-header-cell-cushion {
+            color: #666;
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            padding: 0.5rem;
+        }
+
+        /* Day Cells */
+        .fc .fc-daygrid-day {
+            border-color: rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .fc .fc-daygrid-day:hover {
+            background-color: #f9f9f9;
+        }
+
+        .fc .fc-daygrid-day-top {
+            flex-direction: row;
+            padding: 8px 8px 0;
+        }
+
+        .fc .fc-daygrid-day-number {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #333;
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .fc .fc-daygrid-day-number:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--primary-gold);
+        }
+
+        /* Today's Date */
+        .fc-day-today {
+            background-color: rgba(212, 175, 55, 0.05) !important;
+        }
+
+        .fc-day-today .fc-daygrid-day-number {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        /* Events */
+        .fc-event {
+            border: none;
+            border-radius: 6px;
+            padding: 3px 6px;
+            margin: 2px 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .fc-event:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .fc-event .fc-event-main {
+            display: flex;
+            align-items: center;
+        }
+
+        .fc-event .fc-event-time {
+            font-weight: 600;
+            margin-right: 4px;
+        }
+
+        /* Event Colors */
+        .fc-event.available {
+            background-color: rgba(40, 167, 69, 0.12);
+            color: #28a745;
+            border-left: 3px solid #28a745;
+        }
+
+        .fc-event.booked {
+            background-color: rgba(220, 53, 69, 0.08);
+            color: #dc3545;
+            border-left: 3px solid #dc3545;
+            opacity: 0.9;
+        }
+
+        .fc-event.limited {
+            background-color: rgba(255, 193, 7, 0.15);
+            color: #d39e00;
+            border-left: 3px solid #ffc107;
+        }
+
+        /* More Events Link */
+        .fc .fc-daygrid-more-link {
+            color: #666;
+            font-size: 0.7rem;
+        }
+
+        /* Week and Day View Styling */
+        .fc-timeGridWeek-view .fc-timegrid-slot,
+        .fc-timeGridDay-view .fc-timegrid-slot {
+            height: 2.5em;
+        }
+
+        .fc-timegrid-event {
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .fc .fc-toolbar.fc-header-toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .fc-toolbar-chunk {
+                margin-bottom: 0.5rem;
+            }
+
+            .fc .fc-toolbar-title {
+                font-size: 1.1rem !important;
+                margin: 0.5rem 0;
+            }
+
+            .fc .fc-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .fc .fc-col-header-cell-cushion {
+                font-size: 0.7rem;
+            }
+
+            .fc .fc-daygrid-day-number {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .booking-section {
+                padding: 70px 0;
+            }
+
+            .section-heading {
+                font-size: 2rem;
+            }
+
+            .calendar-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .view-switcher {
+                margin-top: 15px;
+                width: 100%;
+            }
+
+            .view-switcher .btn-group {
+                width: 100%;
+                display: flex;
+            }
+
+            .view-switcher .btn-group .btn {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .calendar-legend {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -678,6 +959,85 @@
         </div>
     </nav>
 
+    <!-- Booking Section -->
+    <section class="booking-section py-5">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h6 class="subheading text-uppercase mb-2" data-aos="fade-up">Schedule Your Appointment</h6>
+                    <h2 class="section-heading mb-3" data-aos="fade-up" data-aos-delay="100">Book Your Eyebrow Service
+                    </h2>
+                    <div class="heading-line mx-auto" data-aos="fade-up" data-aos-delay="200"></div>
+                    <p class="lead mt-4" data-aos="fade-up" data-aos-delay="300">Select a date and time that works best
+                        for you to experience our premium eyebrow services</p>
+                </div>
+            </div>
+
+            <!-- Calendar View Options -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="calendar-controls d-flex align-items-center justify-content-between" data-aos="fade-up">
+                        <div class="d-flex align-items-center">
+                            <button id="prev-btn" class="btn btn-outline-secondary me-2">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button id="next-btn" class="btn btn-outline-secondary me-3">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <h3 id="calendar-title" class="mb-0 calendar-title">May 2025</h3>
+                        </div>
+                        <div class="view-switcher">
+                            <div class="btn-group" role="group">
+                                <button type="button" id="month-view" class="btn btn-view active">Month</button>
+                                <button type="button" id="week-view" class="btn btn-view">Week</button>
+                                <button type="button" id="day-view" class="btn btn-view">Day</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Filter -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="service-filter" data-aos="fade-up" data-aos-delay="100">
+                        <div class="form-group">
+                            <select class="form-select service-select">
+                                <option value="all">All Eyebrow Services</option>
+                                <option value="microblading">Microblading</option>
+                                <option value="powder">Powder Brows</option>
+                                <option value="combo">Combo Brows</option>
+                                <option value="touchup">Touch-Up</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Container -->
+            <div class="row">
+                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="calendar-container">
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="calendar-legend" data-aos="fade-up" data-aos-delay="300">
+                        <span class="legend-item"><span class="legend-color available"></span> Available</span>
+                        <span class="legend-item"><span class="legend-color booked"></span> Booked</span>
+                        <span class="legend-item"><span class="legend-color limited"></span> Limited Availability</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -750,7 +1110,8 @@
             </div>
             <div class="row copyright text-center">
                 <div class="col-md-12">
-                    <p>&copy; 2025 Zion Beauty Studio. All Rights Reserved. Designed by <a href="#">ZION STRATEGIC SOLUTIONS</a></p>
+                    <p>&copy; 2025 Zion Beauty Studio. All Rights Reserved. Designed by <a href="#">ZION STRATEGIC
+                            SOLUTIONS</a></p>
                 </div>
             </div>
         </div>
@@ -762,7 +1123,134 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Lightbox2 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Calendar initialization
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: false, // Remove default header to use our custom controls
+                dayMaxEvents: true, // Allow "more" link when too many events
+                selectable: true,
+                selectMirror: true,
+                editable: false,
+                height: 'auto',
+                events: [
+                    // Sample events - available slots
+                    { title: 'Microblading: 10:00 AM', start: '2025-05-12T10:00:00', end: '2025-05-12T12:00:00', className: 'available', extendedProps: { service: 'microblading' } },
+                    { title: 'Powder Brows: 2:00 PM', start: '2025-05-12T14:00:00', end: '2025-05-12T16:00:00', className: 'available', extendedProps: { service: 'powder' } },
+                    { title: 'Combo Brows: 10:00 AM', start: '2025-05-13T10:00:00', end: '2025-05-13T12:30:00', className: 'available', extendedProps: { service: 'combo' } },
+                    { title: 'Microblading: 1:00 PM', start: '2025-05-14T13:00:00', end: '2025-05-14T15:00:00', className: 'available', extendedProps: { service: 'microblading' } },
+                    { title: 'Touch-Up: 4:00 PM', start: '2025-05-15T16:00:00', end: '2025-05-15T17:30:00', className: 'available', extendedProps: { service: 'touchup' } },
+                    { title: 'Powder Brows: 11:00 AM', start: '2025-05-16T11:00:00', end: '2025-05-16T13:00:00', className: 'available', extendedProps: { service: 'powder' } },
+                    { title: 'Combo Brows: 2:00 PM', start: '2025-05-17T14:00:00', end: '2025-05-17T16:30:00', className: 'available', extendedProps: { service: 'combo' } },
+                    { title: 'Microblading: 10:00 AM', start: '2025-05-19T10:00:00', end: '2025-05-19T12:00:00', className: 'available', extendedProps: { service: 'microblading' } },
 
+                    // Sample events - booked slots
+                    { title: 'Booked', start: '2025-05-11', allDay: true, className: 'booked' },
+                    { title: 'Booked', start: '2025-05-20T10:00:00', end: '2025-05-20T12:00:00', className: 'booked' },
+                    { title: 'Booked', start: '2025-05-21T14:00:00', end: '2025-05-21T16:00:00', className: 'booked' },
+
+                    // Limited availability
+                    { title: 'Limited Availability', start: '2025-05-18', allDay: true, className: 'limited' },
+                    { title: 'Touch-Up: 3:00 PM (Last slot)', start: '2025-05-22T15:00:00', end: '2025-05-22T16:30:00', className: 'limited', extendedProps: { service: 'touchup' } }
+                ],
+                eventClick: function (info) {
+                    if (info.event.className[0] !== 'booked') {
+                        // Here you would add the code to show a booking modal
+                        alert('Selected: ' + info.event.title + ' on ' + info.event.start.toLocaleDateString());
+                    } else {
+                        alert('This time slot is already booked.');
+                    }
+                }
+            });
+
+            calendar.render();
+
+            // Custom control handlers
+            document.getElementById('prev-btn').addEventListener('click', function () {
+                calendar.prev();
+                updateCalendarTitle();
+            });
+
+            document.getElementById('next-btn').addEventListener('click', function () {
+                calendar.next();
+                updateCalendarTitle();
+            });
+
+            document.getElementById('month-view').addEventListener('click', function () {
+                calendar.changeView('dayGridMonth');
+                updateActiveView('month-view');
+            });
+
+            document.getElementById('week-view').addEventListener('click', function () {
+                calendar.changeView('timeGridWeek');
+                updateActiveView('week-view');
+            });
+
+            document.getElementById('day-view').addEventListener('click', function () {
+                calendar.changeView('timeGridDay');
+                updateActiveView('day-view');
+            });
+
+            // Update calendar title based on current view
+            function updateCalendarTitle() {
+                const dateStr = calendar.view.title;
+                document.getElementById('calendar-title').textContent = dateStr;
+            }
+
+            // Update active view button
+            function updateActiveView(viewId) {
+                document.querySelectorAll('.btn-view').forEach(button => {
+                    button.classList.remove('active');
+                });
+                document.getElementById(viewId).classList.add('active');
+            }
+
+            // Initialize calendar title
+            updateCalendarTitle();
+
+            // Service filter functionality
+            document.querySelector('.service-select').addEventListener('change', function () {
+                const selectedService = this.value;
+
+                if (selectedService === 'all') {
+                    calendar.getEvents().forEach(event => {
+                        event.setProp('display', 'auto');
+                    });
+                } else {
+                    calendar.getEvents().forEach(event => {
+                        if (event.extendedProps && event.extendedProps.service === selectedService) {
+                            event.setProp('display', 'auto');
+                        } else if (!event.extendedProps || !event.extendedProps.service) {
+                            // Keep displaying events without service property (like 'Booked' or 'Limited Availability')
+                            event.setProp('display', 'auto');
+                        } else {
+                            event.setProp('display', 'none');
+                        }
+                    });
+                }
+            });
+
+            // Animation for elements when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                el.classList.add('aos-init');
+                observer.observe(el);
+            });
+        });
+    </script>
     <script>
         // Initialize AOS Animation
         AOS.init({
