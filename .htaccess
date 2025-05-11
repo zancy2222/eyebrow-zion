@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+# Rewrite requests to file.html if .html exists
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
